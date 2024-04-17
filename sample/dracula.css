@@ -2,18 +2,9 @@
  * Once upon a time...
  */
 
-:root {
-  --birthDate: 1428px;
-  --deathDate: 1476px;
-}
-
-body {
-  background: #000;
-}
-
 /* ...there was a guy named Vlad */
 
-#dracula {
+/* #dracula {
   opacity: 0;
   display: none;
   visibility: hidden;
@@ -30,4 +21,168 @@ body {
   src: url("/location/Transylvania.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
+} */
+
+
+html {
+  --color-white: #f8f8f2;
+  --theme-my-bubble-color: #6272a4;
+  --theme-accent-color: #a675d8;
+  --theme-their-bubble-color: #44475a;
+  --theme-chat-background-color: #FFFFFF;
+
+  --theme-borderwidth: 0;
+  --theme-borderradius: 13px;
+  --theme-bubble-padding-v: 8px;
+  --theme-bubble-padding-h: 12px;
+
+
+
+  --chatview__backgroundcolor: var(--theme-chat-background-color);
+
+  --chatview__fontsize: 2.2rem;
+  --chatview__lineheight: var(--chatview__fontsize);
+  --chatview__paddingleft: var(--size-spacing-400);
+  --chatview__paddingright: var(--size-spacing-400);
+
+  --chatview__composer__borderradius: var(--theme-borderradius);
+  --chatview__composer__backgroundcolor: #efefef;
+
+  --chatview__message_group__margintop: 12px;
+
+  --chatview__message_tail__opacity: 1;
+  --chatview__message_tail__color: var(--theme-their-bubble-color);
+  --chatview__message__backgroundcolor: var(--theme-their-bubble-color);
+  --chatview__message__fontcolor: #141414;
+
+  --chatview__message__paddingleft: var(--theme-bubble-padding-h);
+  --chatview__message__paddingright: var(--theme-bubble-padding-h);
+  --chatview__message__paddingtop: var(--theme-bubble-padding-v);
+  --chatview__message__paddingbottom: var(--theme-bubble-padding-v);
+  --chatview__message__marginleft: 4px;
+  --chatview__message__marginright: 4px;
+  --chatview__message__margintop: 4px;
+
+  --chatview__message__borderradius: var(--theme-borderradius);
+  --chatview__message_sharp__borderradius: var(--theme-borderradius);
+
+  --chatview__message_sender_name__alpha: 1;
+  --chatview__message_sender_name__lightness: 35%;
+
+  --chatview__message_self__backgroundcolor: var(--theme-my-bubble-color);
+  --chatview__readmarker__fontcolor: var(--theme-accent-color);
+}
+
+html[theme="dark"] {
+
+  --sidebar-background: #21222c;
+  --sidesidebar-background: #343746;
+
+  --theme-chat-background-color: #282a36;
+
+
+
+  --chatview__composer__backgroundcolor: #282a36;
+  --chatview__message__fontcolor:var(--color-white);
+  --chatview__message_sender_name__lightness: 65%;
+
+
+
+  --global__fontcolor: var(--color-white);
+  --global__hsla_color: 88%;
+
+
+
+  --contextmenu__bordercolor: var(--color-neutral-800);
+
+
+  --chatview__message_reaction__backgroundsaturation: 29%;
+  --chatview__message_reaction__backgroundlightness: 72%;
+
+
+  
+.bp_LeftPanel,
+.bp_new-conversation-view .bp_LeftPanel,
+.bp_LeftPanel .rooms_subtitle-container,
+.bp_RoomTile .actions-container .info {
+  background-color: var(--sidebar-background) !important;
+}
+
+.bp_ArchivedList_button {
+  background: var(--sidebar-background) !important;
+}
+
+.mx_EventTile_messageIn .mx_ReplyChain {
+  background: var(--sidebar-background);
+}
+
+.dark-panel {
+  background-color: var(--sidebar-background);
+}
+
+.mx_ContextualMenu,
+.bp_newChatDropdown {
+  background-color: var(--sidebar-background);
+}
+
+.mx_Dialog {
+  background-color: var(--sidebar-background);
+}
+
+
+.mx_MatrixChat > .noselect {
+  background-color: var(--sidesidebar-background) !important;
+  padding-top: 0 !important;
+  height: 100% !important;
+  margin-left: 0 !important;
+}
+.bp_LeftPanel .spaceBar {
+  padding: 48px 0 0 0;
+  margin-bottom: 0;
+  position: absolute !important;
+  top: -76px;
+  left: -48px;
+  background: var(--sidesidebar-background);
+  height: calc(100vh - 32px) !important;
+  width: 48px;
+  box-shadow: -8px 0px 24px -12px hsla(var(--metrology-shadow)) inset,
+    -1px 0 0 inset hsla(var(--metrology-gray-6), 0.25);
+}
+.bp_CommandBarSearch {
+  border-radius: var(--metrology-round-corner-medium);
+  background: var(--sidesidebar-background);
+  /* border: 1px solid hsl(var(--metrology-gray-6)); */
+}
+.bp_Avatar_bg_1,
+.bp_Avatar_bg_2,
+.bp_Avatar_bg_3 {
+  background: linear-gradient(
+    160deg,
+    hsl(var(--metrology-gray-3)) 0%,
+    var(--sidesidebar-background) 100%
+  );
+}
+.mx_ReactionsRowButton {
+  background: var(--sidesidebar-background);
+  border: 0;
+}
+#confirmConnectionSearchInput,
+#newChatUserSearchInput {
+  background-color: var(--sidesidebar-background);
+  /* color: hsl(var(--metrology-text-primary)); */
+  border-radius: var(--metrology-round-corner-medium);
+}
+.commandbar-animation.commandbar-opened {
+  background-color: var(--sidesidebar-background) !important;
+}
+.mx_Dialog_buttons button:active,
+.mx_Dialog button:active {
+  background: var(--sidesidebar-background);
+}
+.mx_ToastContainer .mx_Toast_toast {
+  border-radius: var(--metrology-round-corner-medium);
+  padding: 8px 12px 12px 12px !important;
+  background-color: var(--sidesidebar-background);
+}
+
 }
